@@ -1,0 +1,66 @@
+<h3 class="my-3">of & from</h3>
+<br>
+<strong>Ex 01 (of)</strong>
+<hr>
+<div class="row">
+    <div class="col-md-6">
+        <p class="bg-light py-2 px-3 border rounded">
+            <strong>Data:</strong>of('Video 1', 'Video 2', 'Video 3')
+        </p>
+        <hr>
+        <h6>Result:</h6>
+        <ul id="elContainer">            
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <p class="bg-light py-2 px-3 border rounded">
+            <strong>Data:</strong>of(&#123;a:'Video 1', b:'Video 2',c: 'Video 3'&#125;)
+        </p>
+        <hr>
+        <h6>Result:</h6>
+        <ul id="elContainer"> 
+            <li>a: {{obs2msg.a}}</li>
+            <li>b: {{obs2msg.b}}</li>
+            <li>c: {{obs2msg.c}}</li>
+        </ul>
+    </div>
+</div>
+
+<br>
+<strong>Ex 02 (from)</strong>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <strong>Array</strong>
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded">
+            <strong>Data:</strong>from(['Video 1', 'Video 2', 'Video 3'])
+        </p>
+        <hr>
+        <h6>Result:</h6>
+        <ul id="elContainer3">            
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <strong>Promise</strong>
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded">
+            <strong>Data:</strong>Converting promise to observable
+        </p>
+        <hr>
+        <h6>Result:</h6>
+        <ul id="elContainer4">            
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <strong>String</strong>
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded">
+            <strong>Data:</strong>Converting string to observable
+        </p>
+        <hr>
+        <h6>Result:</h6>
+        <ul id="elContainer5">            
+        </ul>
+    </div>
+</div>

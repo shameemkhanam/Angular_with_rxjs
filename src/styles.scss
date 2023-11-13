@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+.techlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li{
+        background: #f8f8f8;;
+        border: 1px solid #ddd;
+        padding: 8px 13px;
+        margin-bottom: 10px;
+        border-radius: 5px;        
+    }    
+}
+.error li {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.103);
+    border-color: red;
+}
+.completed li {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.103);
+    border-color: green;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .red {
+        margin-right: 10px;
+        background-color: red;
+        width: 80px;
+        height: 40px;
+        border-radius: 3px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .green {
+        margin-right: 10px;
+        background-color: green;
+        width: 80px;
+        height: 40px;
+        border-radius: 3px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .lightblue {
+        margin-right: 10px;
+        background-color: lightblue;
+        width: 80px;
+        height: 40px;
+        border-radius: 3px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .yellow {
+        margin-right: 10px;
+        background-color: yellow;
+        width: 80px;
+        height: 40px;
+        border-radius: 3px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .purple {
+        margin-right: 10px;
+        background-color: purple;
+        width: 80px;
+        height: 40px;
+        border-radius: 3px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

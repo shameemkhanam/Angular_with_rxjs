@@ -1,0 +1,24 @@
+.container .row .list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container .row .list li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(172, 172, 219);
+  border-radius: 5px;
+  width: 100%;
+  height: 110px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.container .row .list li button a {
+  text-decoration: none;
+  color: inherit;
+  /* Optionally, inherit the text color from the parent */
+}
+.container .row .list li button .box-content {
+  text-align: center;
+}/*# sourceMappingURL=all.component.css.map */

@@ -1,0 +1,64 @@
+<h3 class="my-3">Replay Subject</h3>
+<br>
+<div class="row">
+    <div class="col">
+        <h4>{{!methodInterval ? 'Add Video' : 'Interval Started' }}</h4>
+    </div>
+    <div class="col d-flex align-items-center justify-content-end">
+        <button class="btn btn-warning" (click)="toggleMethod()">Toggle Method</button>
+    </div>
+</div>
+
+<hr>
+
+<div class="row justify-content-center" *ngIf="!methodInterval">
+    <div class="col-md-4" >
+        <input type="text" class="form-control" #video>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-success" (click)="onVideoAdd(video.value)">Add Video</button>
+    </div>
+</div>
+
+<hr *ngIf="!methodInterval">
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="text-center">
+            <strong >User 01</strong>
+        </div>        
+        <hr>
+        <ul class="techlist">
+            <li *ngFor="let item of user1List"><strong>Video :</strong>{{item}}</li>            
+        </ul>
+        <div class="text-center">
+            <button class="btn btn-success w-100">Subscribe</button>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="text-center">
+            <strong >User 02</strong>
+        </div> 
+        <hr>
+        <ul class="techlist">
+            <li *ngFor="let item of user2List"><strong>Video :</strong>{{item}}</li>            
+        </ul>
+        <div class="text-center">
+            <button class="btn w-100" [ngClass]="subscribeMode2 ? 'btn-danger' : 'btn-success'" (click)="user2Subscribe()">{{subscribeMode2 ? 'Unsubscribe' : 'Subscribe'}}</button>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="text-center">
+            <strong >User 03</strong>
+        </div> 
+        <hr>
+        <ul class="techlist">
+            <li *ngFor="let item of user3List"><strong>Video :</strong>{{item}}</li>            
+        </ul>
+        <div class="text-center">
+            <button class="btn w-100" [ngClass]="subscribeMode3 ? 'btn-danger' : 'btn-success'" (click)="user3Subscribe()">{{subscribeMode3 ? 'Unsubscribe' : 'Subscribe'}}</button>
+        </div>
+    </div>
+</div>

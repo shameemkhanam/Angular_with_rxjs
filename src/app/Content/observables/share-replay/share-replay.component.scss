@@ -1,0 +1,8 @@
+/* Add this to your CSS file or style tag in your HTML */
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Adjust the max-width as needed */
+  }
+  
