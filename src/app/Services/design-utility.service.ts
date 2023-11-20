@@ -12,6 +12,8 @@ export class DesignUtilityService {
 
 
   exclusive = new Subject<boolean>();
+  observables = new Subject<boolean>();
+  promises = new Subject<boolean>();
 
   // username = new Subject<string>();
   username = new BehaviorSubject<string>('Anup');
@@ -19,6 +21,9 @@ export class DesignUtilityService {
   videoEmit = new ReplaySubject<string>(3,5000);
 
   asyncVideoEmit = new AsyncSubject();
+
+  //practice
+  username_practice = new BehaviorSubject<string>('Sana');
 
   constructor(private http:HttpClient,private errorService:ErrorService) { }
 

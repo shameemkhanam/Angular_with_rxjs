@@ -42,6 +42,7 @@ import { ShareReplayComponent } from './Content/observables/share-replay/share-r
 import { CombineLatestWithLatestFromComponent } from './Content/observables/combine-latest-with-latest-from/combine-latest-with-latest-from.component';
 import { ZipForkJoinComponent } from './Content/observables/zip-fork-join/zip-fork-join.component';
 import { CatchErrorThrowErrorComponent } from './Content/observables/catch-error-throw-error/catch-error-throw-error.component';
+import { Comp4Component } from './comps/comp4/comp4.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { CatchErrorThrowErrorComponent } from './Content/observables/catch-error
     ShareReplayComponent,
     CombineLatestWithLatestFromComponent,
     ZipForkJoinComponent,
-    CatchErrorThrowErrorComponent
+    CatchErrorThrowErrorComponent,
+    Comp4Component
   ],
   imports: [
     BrowserModule,

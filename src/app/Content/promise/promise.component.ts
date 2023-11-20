@@ -1,11 +1,12 @@
-import {  Component, OnInit } from '@angular/core';
+import {  Component, OnDestroy, OnInit } from '@angular/core';
+import { DesignUtilityService } from 'src/app/Services/design-utility.service';
 
 @Component({
   selector: 'app-promise',
   templateUrl: './promise.component.html',
   styleUrls: ['./promise.component.scss']
 })
-export class PromiseComponent implements OnInit{
+export class PromiseComponent implements OnInit,OnDestroy{
 
   promiseRes:string='';
   buyLaptop!: Promise<any>; // Declare the promise property
@@ -20,7 +21,12 @@ export class PromiseComponent implements OnInit{
   };
   buyLaptop2 = fetch('https://jsonplaceholder.typicode.com/posts').then(response => response.json());
 
+  constructor(private du:DesignUtilityService){}
+
   ngOnInit(): void {
+
+    this.du.promises.next(true);
+
     
     // this.buyLaptop = new Promise((resolve,reject)=>{
     //   // resolve('SUCCESS..');     //any one is possible, not both
@@ -47,6 +53,10 @@ export class PromiseComponent implements OnInit{
         resolve(this.dell)
       }, 3000);
     })
+  }
+
+  ngOnDestroy(): void {
+    this.du.promises.next(false);
   }
   
   // dellAvailable(){

@@ -8,12 +8,17 @@ import { DesignUtilityService } from 'src/app/Services/design-utility.service';
 })
 export class SubjectAndBehviorSubjectComponent implements OnInit{
   userName!:string;
+  uname_practice!:string;
 
   constructor(private du:DesignUtilityService){}
 
   ngOnInit(): void {
     this.du.username.subscribe((res)=>{
       this.userName = res;
+    });
+
+    this.du.username_practice.subscribe((res)=>{
+      this.uname_practice = res;
     });
   }
 
